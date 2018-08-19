@@ -1,0 +1,65 @@
+<div *ngIf="ativo">
+    <div class="panel-danger">
+        <h3 class="text-success text-center">
+            Cadastre sua Empresa
+        </h3>
+    </div>
+
+    <div class="panel-heading text-left">
+        <div class="form-group">
+            <label for="inputName" class="text-black-50">
+                Nome da empresa
+            </label>
+            <input id="inputName"
+                   type="text" placeholder="nome"
+                   ([ngModel])="customer.name"
+                   class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="inputDescricao" class="text-black-50">
+                Área de atuação
+            </label>
+            <input id="inputDescricao" name="textinput" type="text"
+                   placeholder="O que faz"
+                   ([ngModel])="customer.description"
+                   class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="inputEmail" class="text-black-50">
+                Seu email
+            </label>
+            <input id="inputEmail" type="text" placeholder="email"
+                   ([ngModel])="customer.email"
+                   class="form-control">
+        </div>
+
+        <div class="form-group text-black-50">
+            <label for="exampleInputEmail1">Endereço</label>
+            <input type="email" class="form-control" id="exampleInputEmail1"
+                   ([ngModel])="customer.address"
+                   aria-describedby="emailHelp"
+                   placeholder="Endereçol">
+        </div>
+
+        <div class="form-group">
+            <label for="inputPhone" class="text-black-50">
+                Seu telefone
+            </label>
+            <input id="inputPhone" type="text"
+                   ([ngModel])="customer.phone"
+                   placeholder="telefone"
+                   class="form-control">
+        </div>
+
+    </div>
+
+    <button type="submit"
+            class="btn btn-primary"
+            [disabled]="saving"
+            (click)="salvar()"
+            style="margin-top: 10px;">
+        Salvar
+    </button>
+</div>

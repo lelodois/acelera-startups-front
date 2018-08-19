@@ -1,0 +1,86 @@
+<div *ngIf="ativo">
+    <div class="panel-danger">
+        <h3 class="text-success text-center">
+            Cadastre sua Startup
+        </h3>
+    </div>
+
+    <div class="panel-heading text-left">
+        <div class="form-group">
+            <label for="inputName" class="text-black-50">
+                Nome da startup
+            </label>
+            <input id="inputName" type="text" placeholder="nome"
+                   ([ngModel])="customer.name"
+                   class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="inputDescricao" class="text-black-50">
+                O que faz ?
+            </label>
+            <input id="inputDescricao" name="textinput" type="text"
+                   placeholder="O que faz"
+                   ([ngModel])="customer.description"
+                   class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="inputEmail" class="text-black-50">
+                Seu email
+            </label>
+            <input id="inputEmail" type="text" placeholder="email"
+                   ([ngModel])="customer.email"
+                   class="form-control">
+        </div>
+
+        <div class="form-group text-black-50">
+            <label for="exampleInputEmail1">Endereço</label>
+            <input type="email" class="form-control"
+                   id="exampleInputEmail1"
+                   aria-describedby="emailHelp"
+                   ([ngModel])="customer.address"
+                   placeholder="Endereçol">
+        </div>
+
+        <div class="form-group">
+            <label for="inputPhone" class="text-black-50">
+                Seu telefone
+            </label>
+            <input id="inputPhone" type="text"
+                   placeholder="telefone"
+                   ([ngModel])="customer.phone"
+                   class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="inputMentoria" class="text-black-50">
+                Qual tipo de mentoria sua startup necessita?
+            </label>
+            <textarea class="form-control"
+                      ([ngModel])="customer.mentoring"
+                      id="inputMentoria"
+                      rows="3">
+        </textarea>
+
+        </div>
+
+        <div class="form-check">
+            <input type="checkbox"
+                   ([ngModel])="customer.findInvestiments"
+                   id="inputInvestimento">
+            <label class="text-black-50" for="inputInvestimento">
+                Preciso de investimento
+            </label>
+        </div>
+
+    </div>
+
+    <button type="submit"
+            class="btn btn-success"
+            (click)="salvar()"
+            [disabled]="saving"
+            style="margin-top: 10px;">
+        Salvar
+    </button>
+</div>

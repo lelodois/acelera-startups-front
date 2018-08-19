@@ -1,0 +1,47 @@
+<div class="container">
+
+    <div *ngIf="message" class="center-block" style="margin: 10px;">
+        <div class="div-alerta div-alert-fixed" (click)="closeMessage()">
+            <div class="alert alert-warning alert-position" role="alert">
+                <div (click)="closeMessage()" style="float:right;">x</div>
+                <div class="ucs-msg text-gray-2">
+                    <h5>{{message}}</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xl-9 mx-auto">
+            <h1 class="mb-5">Conectando grandes empresas com startups promissoras!</h1>
+        </div>
+        <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+            <div class="col-xs-6">
+                <button type="submit"
+                        (click)="showEmpresa()"
+                        class="btn btn-block btn-lg btn-primary">
+                    Para Empresas
+                </button>
+            </div>
+            <div class="col-xs-6">
+                <button type="submit"
+                        (click)="showStartup()"
+                        class="btn btn-block btn-lg btn-success">
+                    Para Startup
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <app-nova-empresa #appEmpresa [ativo]="empresaEnabled"></app-nova-empresa>
+                <app-nova-startup #appStartup [ativo]="startupEnabled"></app-nova-startup>
+            </div>
+        </div>
+    </div>
+</div>
+
