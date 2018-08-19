@@ -9,9 +9,10 @@ import {EventsService} from './provider/service/events.service';
 import {CustomerService} from './provider/service/customer.service';
 import {HttpClientModule} from '@angular/common/http';
 import {NgxPaginationModule} from 'ngx-pagination';
-import {NovaStartupComponent} from './nova-startup/nova-startup.component';
-import {NovaEmpresaComponent} from './nova-empresa/nova-empresa.component';
+import {NovaStartupComponent} from './components/nova-startup/nova-startup.component';
+import {NovaEmpresaComponent} from './components/nova-empresa/nova-empresa.component';
 import {ErrorInterceptorProvider} from './provider/service/errors.service';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
     imports:
@@ -19,6 +20,7 @@ import {ErrorInterceptorProvider} from './provider/service/errors.service';
             HttpClientModule,
             BrowserModule,
             RouterModule,
+            FormsModule,
             NgxPaginationModule,
             APP_ROUTERS
         ],

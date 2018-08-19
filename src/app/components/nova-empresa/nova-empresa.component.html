@@ -30,6 +30,7 @@
                        tabindex="2"
                        #varDescricao
                        maxlength="150"
+                       (value)="customer?.description"
                        (change)="customer.description = varDescricao.value"
                        class="form-control">
             </div>
@@ -76,9 +77,10 @@
 
     <div class="col-xs-12">
         <button type="submit"
-                class="btn btn-group-justified btn-success"
+                class="btn btn-group-justified"
+                [ngClass] = "saveBlocked() ? 'btn-default' : 'btn-success'"
                 tabindex="6"
-                [disabled]="saveEnabled()"
+                [disabled]="saveBlocked()"
                 (click)="save()"
                 style="margin-top: 10px;">
             Salvar

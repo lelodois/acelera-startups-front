@@ -1,7 +1,6 @@
 import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {EventsService} from '../../provider/service/events.service';
-import {NovaStartupComponent} from '../../nova-startup/nova-startup.component';
-import {NovaEmpresaComponent} from '../../nova-empresa/nova-empresa.component';
+import {CustomerBase} from '../customer.base';
 
 declare var $: any;
 
@@ -20,10 +19,10 @@ export class HomeComponent implements OnInit, AfterViewInit {
     startupEnabled = false;
 
     @ViewChild('appStartup')
-    appStartup: NovaStartupComponent;
+    appStartup: CustomerBase;
 
     @ViewChild('appEmpresa')
-    appEmpresa: NovaEmpresaComponent;
+    appEmpresa: CustomerBase;
 
     constructor(private rootNode: ElementRef,
                 private eventsService: EventsService) {
