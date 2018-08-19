@@ -22,12 +22,8 @@ export class CustomerService {
             'description': customer.description,
             'email': customer.email,
             'address': customer.address,
-            'phone': customer.phone,
-            'user': {
-                'id': 1
-            }
+            'phone': customer.phone
         };
-        console.log(body);
         return this.http.post<Customer>(URL_CUST_EMP, body, this.options);
     }
 
@@ -39,12 +35,8 @@ export class CustomerService {
             'address': customer.address,
             'phone': customer.phone,
             'findInvestiments': customer.findInvestiments,
-            'mentoring': customer.mentoring,
-            'user': {
-                'id': 1
-            }
+            'mentoring': customer.mentoring
         };
-        console.log(body);
         return this.http.post<Customer>(URL_CUST_STA, body, this.options);
     }
 }
