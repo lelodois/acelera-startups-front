@@ -13,7 +13,7 @@ export class HttpErrorInterceptor implements HttpInterceptor {
 
         return next.handle(request)
             .catch((err: HttpErrorResponse) => {
-                alert('Ocorreu um erro desconhecido ao salvar o registro.');
+                alert('Ocorreu um erro desconhecido ao save o registro.');
                 return Observable.empty<HttpEvent<any>>();
             });
     }

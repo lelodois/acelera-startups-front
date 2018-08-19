@@ -13,7 +13,7 @@ export class NovaEmpresaComponent {
     @Input()
     private ativo = false;
     private saving = false;
-    private customer = new Customer();
+    customer = new Customer();
 
     constructor(private eventsService: EventsService,
                 private customerService: CustomerService) {
@@ -24,15 +24,19 @@ export class NovaEmpresaComponent {
         this.customer = new Customer();
     }
 
-    salvar() {
+    save() {
         this.saving = true;
 
-        this.customerService.putEmpresa(this.customer)
+        this.customerService.saveEmpresa(this.customer)
             .subscribe(customer => {
                 this.eventsService.messagesEvent
                     .emit('Empresa salva com sucesso id= '.concat(customer.id));
             });
-
     }
+
+    saveEnabled(): boolean {
+        return !(Customer.isValid(this.customer) && (this.saving == false));
+    }
+
 
 }

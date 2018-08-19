@@ -1,5 +1,4 @@
 import {EventEmitter, Injectable} from '@angular/core';
-import {User} from '../model/user.model';
 
 @Injectable()
 export class EventsService {

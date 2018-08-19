@@ -15,7 +15,6 @@ export class NovaStartupComponent {
     private saving = false;
     private customer = new Customer();
 
-
     constructor(private eventsService: EventsService,
                 private customerService: CustomerService) {
 
@@ -26,14 +25,18 @@ export class NovaStartupComponent {
         this.customer = new Customer();
     }
 
-    salvar() {
+    save() {
         this.saving = true;
 
-        this.customerService.putEmpresa(this.customer)
+        this.customerService.saveStartup(this.customer)
             .subscribe(customer => {
                 this.eventsService.messagesEvent
                     .emit('Startup salva com sucesso id= '.concat(customer.id));
             });
+    }
+
+    saveEnabled(): boolean {
+        return !(Customer.isValid(this.customer) && (this.saving == false));
     }
 
 }

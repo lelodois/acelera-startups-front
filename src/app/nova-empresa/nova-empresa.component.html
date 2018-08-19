@@ -1,65 +1,87 @@
 <div *ngIf="ativo">
-    <div class="panel-danger">
-        <h3 class="text-success text-center">
-            Cadastre sua Empresa
-        </h3>
+    <form>
+        <div class="panel-danger">
+            <h3 class="text-success text-center">
+                Cadastre sua Empresa
+            </h3>
+        </div>
+
+        <div class="panel-heading text-left">
+            <div class="form-group">
+                <label for="inputName" class="text-black-50">
+                    Nome da empresa
+                </label>
+                <input id="inputName"
+                       type="text"
+                       tabindex="1"
+                       maxlength="50"
+                       placeholder="nome"
+                       #varName
+                       (change)="customer.name = varName.value"
+                       class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="inputDescricao" class="text-black-50">
+                    Área de atuação
+                </label>
+                <input id="inputDescricao" name="textinput" type="text"
+                       placeholder="O que faz"
+                       tabindex="2"
+                       #varDescricao
+                       maxlength="150"
+                       (change)="customer.description = varDescricao.value"
+                       class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="inputEmail" class="text-black-50">
+                    Seu email
+                </label>
+                <input id="inputEmail" type="text" placeholder="email"
+                       maxlength="50"
+                       tabindex="3"
+                       #varEmail
+                       (change)="customer.email = varEmail.value"
+                       class="form-control">
+            </div>
+
+            <div class="form-group text-black-50">
+                <label for="inputAddress">Endereço</label>
+                <input type="email" class="form-control"
+                       maxlength="100"
+                       tabindex="4"
+                       id="inputAddress"
+                       #varAddress
+                       (change)="customer.address = varAddress.value"
+                       aria-describedby="emailHelp"
+                       placeholder="Endereço">
+            </div>
+
+            <div class="form-group">
+                <label for="inputPhone" class="text-black-50">
+                    Seu telefone
+                </label>
+                <input id="inputPhone" type="text"
+                       maxlength="50"
+                       tabindex="5"
+                       #varPhone
+                       (change)="customer.phone = varPhone.value"
+                       placeholder="telefone"
+                       class="form-control">
+            </div>
+
+        </div>
+    </form>
+
+    <div class="col-xs-12">
+        <button type="submit"
+                class="btn btn-group-justified btn-primary"
+                tabindex="6"
+                [disabled]="saveEnabled()"
+                (click)="save()"
+                style="margin-top: 10px;">
+            Salvar
+        </button>
     </div>
-
-    <div class="panel-heading text-left">
-        <div class="form-group">
-            <label for="inputName" class="text-black-50">
-                Nome da empresa
-            </label>
-            <input id="inputName"
-                   type="text" placeholder="nome"
-                   ([ngModel])="customer.name"
-                   class="form-control">
-        </div>
-
-        <div class="form-group">
-            <label for="inputDescricao" class="text-black-50">
-                Área de atuação
-            </label>
-            <input id="inputDescricao" name="textinput" type="text"
-                   placeholder="O que faz"
-                   ([ngModel])="customer.description"
-                   class="form-control">
-        </div>
-
-        <div class="form-group">
-            <label for="inputEmail" class="text-black-50">
-                Seu email
-            </label>
-            <input id="inputEmail" type="text" placeholder="email"
-                   ([ngModel])="customer.email"
-                   class="form-control">
-        </div>
-
-        <div class="form-group text-black-50">
-            <label for="exampleInputEmail1">Endereço</label>
-            <input type="email" class="form-control" id="exampleInputEmail1"
-                   ([ngModel])="customer.address"
-                   aria-describedby="emailHelp"
-                   placeholder="Endereçol">
-        </div>
-
-        <div class="form-group">
-            <label for="inputPhone" class="text-black-50">
-                Seu telefone
-            </label>
-            <input id="inputPhone" type="text"
-                   ([ngModel])="customer.phone"
-                   placeholder="telefone"
-                   class="form-control">
-        </div>
-
-    </div>
-
-    <button type="submit"
-            class="btn btn-primary"
-            [disabled]="saving"
-            (click)="salvar()"
-            style="margin-top: 10px;">
-        Salvar
-    </button>
 </div>

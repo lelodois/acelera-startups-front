@@ -9,31 +9,11 @@ export class Customer {
     private _findInvestiments: boolean;
     private _mentoring: string;
 
-    public static jsonEmpresa(customer) {
-        return {
-            'name': customer.name,
-            'description': customer.description,
-            'email': customer.email,
-            'address': customer.address,
-            'phone': customer.phone
-        };
-    }
-
-    public static jsonStartup(customer) {
-        return {
-            'name': customer.name,
-            'description': customer.description,
-            'email': customer.email,
-            'address': customer.address,
-            'phone': customer.phone,
-            'findInvestiments': customer.findInvestiments,
-            'mentoring': customer.mentoring
-        };
-    }
-
-
-    get id(): string {
-        return this._id;
+    public static isValid(customer: Customer) {
+        return customer.name
+            && customer.description
+            && customer.email
+            && customer.address;
     }
 
     set id(value: string) {
