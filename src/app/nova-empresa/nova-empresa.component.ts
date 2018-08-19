@@ -11,8 +11,8 @@ import {CustomerService} from '../provider/service/customer.service';
 export class NovaEmpresaComponent {
 
     @Input()
-    private ativo = false;
-    private saving = false;
+    ativo = false;
+    saving = false;
     customer = new Customer();
 
     constructor(private eventsService: EventsService,

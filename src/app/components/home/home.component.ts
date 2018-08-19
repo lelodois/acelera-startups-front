@@ -13,17 +13,17 @@ declare var $: any;
 })
 export class HomeComponent implements OnInit, AfterViewInit {
 
-    private modal = null;
-    private message = undefined;
+    modal = null;
+    message = undefined;
 
-    private empresaEnabled = false;
-    private startupEnabled = false;
+    empresaEnabled = false;
+    startupEnabled = false;
 
     @ViewChild('appStartup')
-    private appStartup: NovaStartupComponent;
+    appStartup: NovaStartupComponent;
 
     @ViewChild('appEmpresa')
-    private appEmpresa: NovaEmpresaComponent;
+    appEmpresa: NovaEmpresaComponent;
 
     constructor(private rootNode: ElementRef,
                 private eventsService: EventsService) {
