@@ -1,11 +1,5 @@
 # Acelera Startups Front
 
-Instalação
-
-Instale o docker; <p>
-
-sudo docker run -p 80:80 lelodois/acelera-front:first
-
 Versão frontend do sistema de cadastro de startup e empresas
 
 * ** Backend ** - *Java API* - [Source code](https://github.com/lelodois/acelera-startups-back)
@@ -15,6 +9,10 @@ Versão frontend do sistema de cadastro de startup e empresas
 ```
   Docker
 ```
+
+### Instalação
+https://hub.docker.com/r/lelodois/acelera-front/
+
 ### Tecnologias
 
 * Angular 4
