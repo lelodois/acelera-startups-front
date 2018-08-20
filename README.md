@@ -1,9 +1,7 @@
-# acelera-startups-
+# Acelera Startups Front
 
+Instalação
 
- 
-git clone https://github.com/lelodois/acelera-startups-front.git
+Instale o docker; <p>
 
-sudo docker build -t acelera-front 
- 
-sudo docker run -d -p 80:80 acelera-front
+sudo docker run -p 80:80 lelodois/acelera-front:first
