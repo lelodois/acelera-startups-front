@@ -1,4 +1,4 @@
-# acelera-startups-front
+# Acelera Startups Front
 
 Instalação
 
