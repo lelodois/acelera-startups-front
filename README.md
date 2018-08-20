@@ -2,8 +2,6 @@
 
 Versão frontend do sistema de cadastro de startup e empresas
 
-* ** Backend ** - *Java API* - [Source code](https://github.com/lelodois/acelera-startups-back)
-
 ### Pré-requisitos
 
 ```
@@ -23,7 +21,9 @@ https://hub.docker.com/r/lelodois/acelera-front/
 ### Home page
 ![App](https://github.com/lelodois/acelera-startups-front/blob/master/documentation/principal.png)
 
+
 ### Autor
+* ** Backend ** - *Java API* - [Source code](https://github.com/lelodois/acelera-startups-back)
 
 * **Léo Costa** - *Initial work* - [Meu git](https://github.com/lelodois)
 
