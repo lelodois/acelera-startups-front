@@ -25,10 +25,6 @@ Versão frontend do sistema de cadastro de startup e empresas
 ### Home page
 ![App](https://github.com/lelodois/acelera-startups-front/blob/master/documentation/principal.png)
 
-### Cadastro de startup e empesas
-![App](https://github.com/lelodois/acelera-startups-front/blob/master/documentation/cad-empresa.png)
-
-
 ### Autor
 
 * **Léo Costa** - *Initial work* - [Meu git](https://github.com/lelodois)
